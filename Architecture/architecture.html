@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vaandel - architecture</title>
+    
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/tna5hou.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>vaandel</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html">thuis</a>
+        <a href="../Architecture/architecture.html">architectuur</a>
+        <a href="../Gallery/gallery.html">fotogallerij</a>
+        <a href="../about.html">over</a>
+        <a href="https://lucasdevaan.github.io/snufjes/" target="_blank" rel="noopener noreferrer">snufjes</a>
+    </nav>
+
+<main>
+        <div class="gallery">
+            <div class="img-wrap">
+                <img src="../_Assets/Architecture/play 2026/entrance.jpg" alt="Gallery image">
+                <div class="label">
+                    <a href="#" id="openPdfLink">play: kuilendorp</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pdfModal" class="modal-overlay">
+        
+            <div class="modal-text">
+                <span id="closeModal" class="close-btn">&times;</span>
+                <h2>kuilendorp</h2>
+                <p> Q4 2026<br>
+                    Play, MSc architecture<br><br>
+                    
+                    De bilbiotheek 'Kuilendorp' was het resultaat van het vak 'Play'. Het is een renovtieproject
+                    op de Linkeroever van Brussel dat je uitnodigt 
+                    om te spelen, lezen en te ontdekken.<br><br>
+                    
+                    In dit project is geexperimenteerd met hoogtes en dieptes om een omgeving te 
+                    maken die van nature aanzet tot spel. Zo zijn er knusse 
+                    zitkuilen en hellinkjes gecreëerd die de ruimte zelf 
+                    speelbaar maken. Dit wordt doorgetrokken naar de buitenkant, waardoor er een dubbel 
+                    auditorium is ontstaan met zowel een binnen- als een buitenzijde. <br><br>
+                    
+                    Om te laten zien hoe de plek in de praktijk leeft, is het project 
+                    gepresenteerd als een verhalend boekje. Hierin spelen drie bekenden 
+                    van mij de hoofdrol: een student, een juf en een oma. Via hun 
+                    ogen en avonturen ontdek je als lezer hoe deze drie 
+                    verschillende generaties het Kuilendorp allemaal op hun eigen, unieke 
+                    manier beleven en gebruiken.</p>
+            </div>
+                
+            <object class="pdf-container" data="../_Assets/Architecture/play 2026/Kuilendorp_spreads.pdf" type="application/pdf">
+                <embed src="../_Assets/Architecture/play 2026/Kuilendorp_spreads.pdf" type="application/pdf" width="100%" height="100%" />
+            </object>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lucas de Vaan</p>
+    </footer>
+
+    <script>
+        const openLink = document.getElementById('openPdfLink');
+        const modal = document.getElementById('pdfModal');
+        const closeBtn = document.getElementById('closeModal'); // Got the X button
+
+        // Open modal
+        openLink.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            modal.classList.add('show');
+        });
+
+        // Close modal ONLY when clicking the X button
+        closeBtn.addEventListener('click', function() {
+            modal.classList.remove('show');
+        });
+
+        // Note: The code to close the modal by clicking the background has been removed.
+    </script>
+</body>
+</html>
