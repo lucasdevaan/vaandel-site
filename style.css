@@ -2,7 +2,7 @@
   --background: #ffffff;
   --text: #2fb83a;
   --maintext: #363636;
-  --nav: #80a582;
+  --nav: #34913c;
   --label: #363636;
 }
 
@@ -31,10 +31,19 @@ nav {
   padding-top: 10px;
 }
 
+nav a:link, nav a:visited {
+  color: var(--nav);
+}
+
 main {
   flex: 1;
   padding-top: 20px;
   color: var(--maintext);
+}
+
+header a {
+  text-decoration: none;
+  color: var(--text)
 }
 
 .textcontainer {
@@ -170,15 +179,15 @@ a {
     margin-left: 1.5vh;
     margin-right: 4vh;
     color: #000000;
-    font-family: "cormorant", sans-serif;
+    font-family: "courier new", sans-serif;
     cursor: auto;
-    font-size: 18px;
+    font-size: 17px;
     text-align: justify;
 }
 
 .close-btn {
     position: absolute;
-    top: 20px; 
+    top: 15px; 
     right: 0;
     color: #2c2a2a;
     font-size: 50px;
