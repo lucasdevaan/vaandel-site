@@ -48,7 +48,9 @@
                 </svg>
             </div>
 
-            <img src="Assets/Home/DSC01600.png" alt="Home image">
+            <img class="slide active" src="Assets/Home/DSC01600.png" alt="Home image 1">
+            <img class="slide" src="Assets/Home/DSC01522.jpg" alt="Home image 2">
+            <img class="slide" src="Assets/Home/DSC01515.jpg" alt="Home image 3">
 
         </section>
 
@@ -57,6 +59,16 @@
     <footer>
         <p>&copy; 2026 Lucas de Vaan</p>
     </footer>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+        setInterval(() => {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }, 5000);
+    </script>
 
 </body>
 </html>
