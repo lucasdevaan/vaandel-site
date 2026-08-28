@@ -3,7 +3,7 @@
   --text: #2fb83a;
   --maintext: #363636;
   --nav: #80a582;
-  --label: #353535;
+  --label: #363636;
 }
 
 * {
@@ -98,55 +98,51 @@ a {
   width: 100%;
   height: 350px;
   object-fit: cover;
-  filter: grayscale(0%);
-  opacity: 1;
+  filter: grayscale(100%);
   transition: filter 0.3s ease, opacity 0.3s ease;
   display: block;
 }
 
+.img-wrap a {
+  text-decoration: none;
+}
+
+.img-wrap-2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrap-2 img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
 .label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  text-align: left;
   opacity: 0;
   transition: opacity 0.3s ease;
-  text-align: center;
   pointer-events: auto;
 }
 
 .label a {
-  font-family: "cormorant", sans-serif;
+  font-family: "courier new", monospace;
   font-weight: 400;
-  font-style: italic;
-  font-size: 2rem;
+  font-size: 18px;
   color: var(--label);
-  text-decoration: none;
   position: relative;
 }
 
-.label a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -6px;
-  transform: translateX(-50%);
-  width: 0%;
-  height: 1px;
-  background: var(--label);
-}
-
 .img-wrap:hover img {
-  filter: grayscale(100%);
-  opacity: 0.2;
+  filter: grayscale(0%);
 }
 
 .img-wrap:hover .label {
   opacity: 1;
-}
-
-.label a:hover::after {
-  width: 100%;
 }
 
 .modal-overlay {
