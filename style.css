@@ -46,6 +46,11 @@ header a {
   color: var(--text)
 }
 
+#home {
+  position: relative;
+  display: block;
+}
+
 .textcontainer {
   display: flex;
   justify-content: space-between;

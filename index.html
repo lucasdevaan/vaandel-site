@@ -8,6 +8,7 @@
     <link rel="icon" sizes="any" href="../Assets/favicon.ico">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dynamics.css">
     <link rel="stylesheet" href="https://use.typekit.net/tna5hou.css">
 </head>
 
@@ -28,9 +29,29 @@
     </nav>
 
     <main>
+        
         <section id="home">
+
+            <div class="rotating-circle">
+                <svg viewBox="0 0 100 100" width="200" height="200">
+                    <defs>
+                    <path id="circlePath" 
+                        d="M 50, 10 
+                        a 40, 40 0 1, 1 0, 80 
+                        a 40, 40 0 1, 1 0, -80" />
+                    </defs>
+                    <text>
+                        <textPath href="#circlePath" textLength="250" lengthAdjust="spacing">
+                             ik • draai • in • een • rondje • 
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+
             <img src="Assets/Home/DSC01600.png" alt="Home image">
+
         </section>
+
     </main>
 
     <footer>

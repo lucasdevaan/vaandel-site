@@ -1,0 +1,22 @@
+.rotating-circle {
+  position: absolute;
+  z-index: 10;
+  
+  bottom: 30px;  
+  right: 30px; 
+  
+  width: 200px;
+  height: 200px;
+  animation: spin 15s linear infinite; 
+}
+
+.rotating-circle text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  fill: var(--background);
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg); }
+  100% {transform: rotate(360deg); }
+}
