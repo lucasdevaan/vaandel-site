@@ -41,14 +41,12 @@
                         a 40, 40 0 1, 1 0, -80" />
                     </defs>
                     <text>
-                        <textPath href="#circlePath" textLength="250" lengthAdjust="spacing">
-                             ik • draai • in • een • rondje • 
-                        </textPath>
+                        <textPath href="#circlePath" textLength="242" lengthAdjust="spacing"> ik • draai • in • een • rondje •</textPath>
                     </text>
                 </svg>
             </div>
 
-            <img class="slide active" src="Assets/Home/DSC01600.png" alt="Home image 1">
+            <img class="slide" src="Assets/Home/DSC01600.png" alt="Home image 1">
             <img class="slide" src="Assets/Home/DSC01522.jpg" alt="Home image 2">
             <img class="slide" src="Assets/Home/DSC01515.jpg" alt="Home image 3">
 
@@ -62,7 +60,8 @@
 
     <script>
         const slides = document.querySelectorAll('.slide');
-        let currentIndex = 0;
+        let currentIndex = Math.floor(Math.random() * slides.length);
+        slides[currentIndex].classList.add('active');
         setInterval(() => {
             slides[currentIndex].classList.remove('active');
             currentIndex = (currentIndex + 1) % slides.length;
